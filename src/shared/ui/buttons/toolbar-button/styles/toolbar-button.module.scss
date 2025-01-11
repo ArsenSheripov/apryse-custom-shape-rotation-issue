@@ -1,0 +1,123 @@
+
+.toolbar-button {
+  display: flex;
+  min-width: 65px;
+  height: 55px;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 6.5px 7px;
+  border-radius: 4px;
+  background-color: white;
+
+  &__icon-wrapper {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+  }
+
+  &:active:not(:disabled) &__icon-wrapper {
+    color: gray;
+  }
+
+  &:focus:not(:disabled, :active) {
+    outline: 4px solid blue;
+  }
+
+  &:disabled:not(.loading) {
+    .toolbar-button__icon-wrapper,
+    .toolbar-button__text {
+      color: gray;
+    }
+  }
+
+  &--outline {
+    border: 1px solid lightgray;
+    background-color: white;
+  }
+
+  &--small {
+    min-width: 24px;
+    height: 24px;
+    padding: 4px;
+  }
+
+  &--small &__icon-wrapper {
+    width: 16px;
+    height: 16px;
+    color: black;
+  }
+
+  &--small:hover:not(:disabled) &__icon-wrapper {
+    color: black;
+  }
+
+  &--medium {
+    min-width: 44px;
+    height: 44px;
+    padding: 8px;
+  }
+
+  &--medium &__icon-wrapper {
+    width: 36px;
+    height: 36px;
+    color: black;
+  }
+
+  &--medium:hover:not(:disabled) &__icon-wrapper {
+    color: black;
+  }
+
+  &--active,
+  &--active:hover:not(:disabled, :active, .loading),
+  &--active:active:not(:disabled) {
+    background-color: lightgray;
+  }
+
+  &--active &__icon-wrapper,
+  &--active:hover:not(:disabled, :active, .loading) &__icon-wrapper,
+  &--active:active:not(:disabled) &__icon-wrapper {
+    color: yellowgreen;
+  }
+
+  &__text {
+    color: black;
+
+    &--active {
+      color: blue;
+    }
+  }
+
+  &.loading {
+    color: black;
+  }
+
+  &--active.loading {
+    color: blue;
+  }
+}
+
+.toolbar-button__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar-button__content-container {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-button__right-content {
+  margin-left: 2px;
+  color: black;
+
+  &--active {
+    color: blue;
+  }
+}

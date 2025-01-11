@@ -1,0 +1,1 @@
+export const handleBookmark = async () =>{}
