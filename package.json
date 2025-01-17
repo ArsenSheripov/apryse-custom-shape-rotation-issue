@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "copy-webviewer": "node tools/copy-webviewer-files.js",
+    "postinstall": "yarn copy-webviewer"
   },
   "dependencies": {
     "@pdftron/webviewer": "^10.12.0",
